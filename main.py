@@ -15,12 +15,10 @@ except:
     print('already exist')
 while True:
     event, values=window.read()
-    def df():
+    if not bool(valuis):
         for row in cur.execute('SELECT * FROM todo'):
             valuis.append(row[0])
         window['list'].update(valuis)
-    if not bool(valuis):
-        df()
     if event=='push':
         valuis.append(values['input'])
         window['list'].update(valuis)
